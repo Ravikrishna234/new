@@ -1,5 +1,4 @@
-x=10
-print("Hello!")
-while (x>=2):
-    print("print ",x)
-    x-=2
+print("print Hello!")
+for i in range(10,0,-2):
+    print("print ",i)
+    
