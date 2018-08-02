@@ -13,7 +13,7 @@ def main():
             cons_c = cons_c + 1
 
     print("Number of vowels:")
-    print(str(vowel_c))
+    print(vowel_c)
 
 
 if __name__ == "__main__":
