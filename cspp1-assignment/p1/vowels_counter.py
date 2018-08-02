@@ -3,7 +3,7 @@
 def main():
 
     """vowels"""
-    v_input = input("Enter a string")
+    v_input = input()
     vowel_c = 0
     cons_c = 0
     for i in v_input:
