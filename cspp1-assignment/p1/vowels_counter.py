@@ -12,7 +12,7 @@ def main():
         else:
             cons_c = cons_c + 1
 
-    print("Number of vowels:")
+    # print("Number of vowels:")
     print(vowel_c)
 
 
