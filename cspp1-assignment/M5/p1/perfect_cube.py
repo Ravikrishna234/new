@@ -6,11 +6,6 @@ def main():
     for i in range(abs(x_cu)+1):
         if i**3 >= abs(x_cu):
             break
-    if i ** 3 != abs(x_cu):
-        print(x_cu, 'is not a perfect cube')
-    else:
-        if x_cu < 0:
-            i = -i
     print(x_cu,"is a perfect cube")
 if __name__ == "__main__":
     main()
