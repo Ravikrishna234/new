@@ -11,6 +11,6 @@ def main():
     else:
         if x_cu < 0:
             i = -i
-    print('Cube root of ' + str(x_cu) + ' is ' + str(i))
+    print(x_cu," is a perfect cube")
 if __name__ == "__main__":
     main()
