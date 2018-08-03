@@ -10,8 +10,7 @@ def main():
     if abs(st_art**2 - sq_in) >= cons_tant:
         print('Failed on cube root of', sq_in)
     else:
-        print(st_art, 'is close to the square root of', sq_in)
+        print(st_art)
 
 if __name__ == "__main__":
     main()
-    
