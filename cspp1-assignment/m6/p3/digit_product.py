@@ -14,6 +14,7 @@ def main():
             product_st=-product_st
         elif temp_in == 0:
             print(temp_in)
-    print(product_st)
+        else:
+            print(product_st)
 if __name__ == "__main__":
     main()
