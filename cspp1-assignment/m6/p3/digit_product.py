@@ -5,6 +5,8 @@ def main():
     temp_in = num_in
     if num_in < 0:
         num_in = -num_in
+    elif num_in == 0
+        print(num_in)
     product_st = 1
     while num_in > 0:
         di_git = num_in % 10
@@ -12,11 +14,6 @@ def main():
         num_in = num_in // 10
         if temp_in < 0:
             product_st=-product_st
-            print(product_st)
-        elif temp_in == 0:
-            product_st = 0
-            print(product_st)
-        else:
-            print(product_st)
+    print(product_st)
 if __name__ == "__main__":
     main()
