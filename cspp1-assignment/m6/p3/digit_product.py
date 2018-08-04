@@ -7,7 +7,6 @@ def main():
         num_in = -num_in
     elif num_in == 0:
         print(num_in)
-        break
     else:
         product_st = 1
         while num_in > 0:
