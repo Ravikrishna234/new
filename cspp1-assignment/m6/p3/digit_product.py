@@ -14,7 +14,7 @@ def main():
             product_st = product_st * di_git
             num_in = num_in // 10
             if temp_in < 0:
-                product_st=-product_st
+                product_st = -product_st
         print(product_st)
 if __name__ == "__main__":
     main()
