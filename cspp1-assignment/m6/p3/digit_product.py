@@ -6,7 +6,7 @@ def main():
     if num_in == 0:
         print(num_in)
     else:
-        if num_in < 0
+        if num_in < 0:
             num_in = -num_in
         product_st = 1
         while num_in > 0:
