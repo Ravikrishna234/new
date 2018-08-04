@@ -3,11 +3,11 @@ def main():
     """digit"""
     num_in = int(input())
     temp_in = num_in
-    if num_in < 0:
-        num_in = -num_in
-    elif num_in == 0:
+    if num_in == 0:
         print(num_in)
     else:
+        if num_in < 0
+            num_in = -num_in
         product_st = 1
         while num_in > 0:
             di_git = num_in % 10
