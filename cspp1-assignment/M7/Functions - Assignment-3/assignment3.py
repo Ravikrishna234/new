@@ -20,7 +20,7 @@ def paying_debt(balance_1, annual_interest_rate):
             month_payment_up_bound = gu_ess
             new_balance = balance_1
         else:
-            return (gu_ess, 2)
+            return round(gu_ess, 2)
 
         gu_ess = (month_payment_low_bound + month_payment_up_bound)/2
 
