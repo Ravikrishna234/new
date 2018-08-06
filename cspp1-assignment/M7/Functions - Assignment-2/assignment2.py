@@ -1,26 +1,25 @@
 """Assignment 2"""
-def payingDebtOffInAYear(balance1, annualInterestRate):
+def paying_debtoff(mainbalance_1, annual_interest_rate):
     """Debt"""
-    fixedpayment=0
-    balance = balance1
-    while balance > 0:
-        balance = balance1
-        month=1
-        monthlyinterestrate=annualInterestRate/12.0
-        fixedpayment = fixedpayment + 10
-        while month<=12:
-            monthlyunpaidbalance=balance-fixedpayment
-            Updatedbalance=monthlyunpaidbalance+(monthlyinterestrate*monthlyunpaidbalance)
-            balance=Updatedbalance
-            month += 1
-    return fixedpayment
+    fixed_payment = 0
+    temp_balance = mainbalance_1
+    while temp_balance > 0:
+        temp_balance = mainbalance_1
+        month_ = 1
+        monthly_interest_rate = annual_interest_rate / 12.0
+        fixed_payment = fixed_payment + 10
+        while month_ <= 12:
+            monthly_unpaid_balance = temp_balance - fixed_payment
+            updated_balance = monthly_unpaid_balance+(monthly_interest_rate*monthly_unpaid_balance)
+            temp_balance = updated_balance
+            month_ += 1
+    return fixed_payment
 
 def main():
     """Debt"""
     data = input()
     data = data.split(' ')
-    data = list(map(float,data))
-    print("Lowest payment:"+str(payingDebtOffInAYear(data[0],data[1])))
-    
+    data = list(map(float, data))
+    print("Lowest payment:"+str(paying_debtoff(data[0], data[1])))
 if __name__ == "__main__":
     main()
