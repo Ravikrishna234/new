@@ -1,4 +1,4 @@
-"""GCD iteration"""
+"""GCD iteration python"""
 def gcdIter(a, b):
     """gcd"""
     if a > b:

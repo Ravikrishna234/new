@@ -1,4 +1,4 @@
-"""GCD recursion"""
+"""GCD recursion python"""
 def gcdRecur(a, b):
     """gcd"""
     if b != 0:
