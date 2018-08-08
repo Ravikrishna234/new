@@ -1,13 +1,13 @@
 """WORDS"""
 def get_guessed_word(secret_word, letters_guessed):
     """word"""
-    st = ''
+    st_r = ''
     for i in secret_word:
         if i not in letters_guessed:
-            st = st + '_'
+            st_r = st_r + '_'
         else:
-            st = st + i
-    return st
+            st_r = st_r + i
+    return st_r
 def main():
     """word"""
     user_input = input()
