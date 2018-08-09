@@ -51,8 +51,8 @@ def getAvailableLetters(lettersGuessed):
     """hang"""
     import string
     st_r = ''
-    co_unt = dict((key, 0) for key in string.ascii_lowercase)
-    for char in co_unt.keys():
+    count = dict((key, 0) for key in string.ascii_lowercase)
+    for char in count.keys():
         if char not in lettersGuessed:
             st_r = st_r + char
     return st_r
