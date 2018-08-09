@@ -2,6 +2,7 @@
 def get_available_letters(letters_guessed):
     """sort"""
     import string
+    st_r = ''
     co_unt = dict((key, 0) for key in string.ascii_lowercase)
     for char in co_unt.keys():
         if char not in letters_guessed:
