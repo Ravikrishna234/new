@@ -25,7 +25,7 @@ def main():
         else:
             aDict[l[0][0]].append(l[1])
         
-    print(biggest(aDict))
+    print(biggest(aDict))   
 
 
 if __name__== "__main__":
