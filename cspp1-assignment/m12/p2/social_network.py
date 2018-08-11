@@ -37,14 +37,14 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     """
+    if arg1 in network.values():
+        del network[arg1]
     if arg1 in network.keys():
         del network[arg1]
     return network
 
 def main():
-    '''
-        handling testcase input and printing output
-    '''
+    """social"""
     network = eval(input())
     lines = int(input())
     for i in range(lines):
