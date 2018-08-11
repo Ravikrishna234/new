@@ -12,9 +12,9 @@ def main():
         string_ = input()
         index_ = string_.split()
         if index_[0] not in dictionary_:
-            dictionary_[index_[0] = index_[2].split(",")
+            dictionary_[index_[0]] = index_[2].split(",")
         else:
-            dictionary_[index_[0].append(index_[2].split(","))
+            dictionary_[index_[0]].append(index_[2].split(","))
     print(create_social_network(dictionary_))
 
 if __name__ == "__main__":
