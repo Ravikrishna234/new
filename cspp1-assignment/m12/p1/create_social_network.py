@@ -9,6 +9,7 @@ def main():
     lines_ = input()
     i = ''
     for i in range(int(lines_)):
+        k = i
         string_ = input()
         index_ = string_.split()
         if index_[0] not in dictionary_ and index_[1] == "follows":
