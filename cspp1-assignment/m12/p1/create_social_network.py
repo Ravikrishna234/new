@@ -7,9 +7,7 @@ def main():
     """social"""
     dictionary_ = {}
     lines_ = input()
-    k= ''
     for i in range(int(lines_)):
-        k = k + i
         string_ = input()
         index_ = string_.split()
         if index_[0] not in dictionary_ and index_[1] == "follows":
