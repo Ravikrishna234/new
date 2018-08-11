@@ -2,6 +2,7 @@
 
 def biggest(aDict):
     """big"""
+    print(aDict)
     i = 0
     L = []
     for k in aDict:
