@@ -2,6 +2,7 @@
 def how_many(aDict):
     """dict"""
     print(aDict)
+    print(aDict)
     total = 0
     k = ''
     value_list = {}
@@ -21,7 +22,7 @@ def main():
         s=input()
         l=s.split()
         if l[0][0] not in aDict:
-            aDict[l[0][0]]=[l[1]]
+            aDict[l[0][0]]=[l[1].split(",")]
         else:
             aDict[l[0][0]].append(l[1])
         
