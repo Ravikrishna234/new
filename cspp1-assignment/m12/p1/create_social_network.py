@@ -12,8 +12,10 @@ def main():
         string_ = input()
         index_ = string_.split()
         if index_[0] not in dictionary_:
+            if index_[1] == "follows"
             dictionary_[index_[0]] = index_[2].split(",")
         else:
+            if index_[1] == "follows"
             dictionary_[index_[0]].append(index_[2].split(","))
     print(create_social_network(dictionary_))
 
