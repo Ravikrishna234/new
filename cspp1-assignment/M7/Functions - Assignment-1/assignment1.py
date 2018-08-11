@@ -8,9 +8,9 @@ def paying_debtoff(balance, annual_interest_rate, monthly_payment_rate):
         minimum_monthly_payment = monthly_payment_rate * updated_balance
         monthly_unpaid_balance = updated_balance - minimum_monthly_payment
         updated_balance = monthly_unpaid_balance + (monthly_unpaid_balance*monthly_interest_rate)
-        p_in = round(updated_balance, 2)
+        round_ = round(updated_balance, 2)
         month_ += 1
-    print("Remaining balance:", p_in)
+    print("Remaining balance:", round_)
 def main():
     """balance"""
     data = input()

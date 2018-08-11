@@ -26,6 +26,7 @@ def main():
 		adict[l[0]]=int(l[1])
 	l2=input().split()
 	print(l2)
+	print(adict)
 	print(isValidWord(word,adict,l2))
 		
 

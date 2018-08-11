@@ -2,8 +2,8 @@
 
 def eval_quadratic(a_in, b_in, c_in, x_in):
     """quadratic"""
-    p_q = a_in * (x_in * x_in) + b_in * x_in + c_in
-    return p_q
+    result_ = a_in * (x_in * x_in) + b_in * x_in + c_in
+    return result_
 
 def main():
     """quadratic"""

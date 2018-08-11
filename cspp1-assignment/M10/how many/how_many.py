@@ -1,12 +1,17 @@
 """VALUES IN DICTIONARY"""
 def how_many(aDict):
     """dict"""
+    print(aDict)
     total = 0
+    k = ''
     value_list = {}
     for i in aDict:
         value_list = aDict[i]
         count = len(value_list)
+        k = k + i
+
         total += count
+    print(len(k))
     return total
 def main():
     """dict"""

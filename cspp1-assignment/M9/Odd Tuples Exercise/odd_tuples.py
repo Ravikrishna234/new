@@ -2,8 +2,9 @@
 def oddTuples(aTup):
     """odd"""
     odd=()
+    s = 0
     length = len(aTup)
-    for t in range(0,length,2):
+    for t in range(0,len(aTup),2):
         odd = odd + (aTup[t],)
     return odd
     
@@ -15,6 +16,7 @@ def main():
     aTup=()
     for j in range(len(data)):
         aTup += (str(data[j]),)
+    print(aTup)
     print(oddTuples(aTup))
         
 

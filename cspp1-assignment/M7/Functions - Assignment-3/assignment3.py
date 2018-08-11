@@ -5,22 +5,22 @@ def paying_debt(balance_1, annual_interest_rate):
     month_payment_low_bound = balance_1 / 12
     month_payment_up_bound = (balance_1 * (1 + monthly_interest_rate)**12) / 12.0
     new_balance = balance_1
-    eps_ilon = 0.0001
-    gu_ess = (month_payment_low_bound + month_payment_up_bound)/2.0
+    epsilon_ = 0.0001
+    guess_ = (month_payment_low_bound + month_payment_up_bound)/2.0
     while True:
         month_ = 1
         while month_ <= 12:
-            new_balance = new_balance - gu_ess
+            new_balance = new_balance - guess_
             new_balance = new_balance + (monthly_interest_rate * new_balance)
             month_ += 1
-        if new_balance > 0 and new_balance > eps_ilon:
-            month_payment_low_bound = gu_ess
+        if new_balance > 0 and new_balance > epsilon_:
+            month_payment_low_bound = guess_
             new_balance = balance_1
-        elif new_balance < 0 and new_balance < -eps_ilon:
-            month_payment_up_bound = gu_ess
+        elif new_balance < 0 and new_balance < epsilon_:
+            month_payment_up_bound = guess_
             new_balance = balance_1
         else:
-            return round(gu_ess, 2)
+            return round(guess_, 2)
 
         gu_ess = (month_payment_low_bound + month_payment_up_bound)/2
 
