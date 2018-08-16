@@ -14,7 +14,6 @@ def is_straight(hand):
 def is_flush(hand):
     """POKER"""
     suit = hand[0]
-    print(hand[0])
     for h_input in hand:
         if suit[1] != h_input[1]:
             return False
