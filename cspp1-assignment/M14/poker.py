@@ -74,7 +74,7 @@ def one_pair(hand):
     face_values.sort()
     face = set(face_values)
     if len(face) == 4:
-        return True
+    return True
     return False
 def hand_rank(hand):
     """POKER"""
