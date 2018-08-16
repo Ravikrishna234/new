@@ -14,11 +14,10 @@ def is_straight(hand):
 def is_flush(hand):
     """POKER"""
     for i in range(len(hand)):
-    suit = hand[0]
-    for h_input in hand:
-        if suit[1] != h_input[1]:
-            print(suit[1])
-            return False
+        suit = hand[0]
+        for h_input in hand:
+            if suit[1] != h_input[1]:
+                return False
     return True
 def four_of_a_kind(hand):
     """POKER"""
