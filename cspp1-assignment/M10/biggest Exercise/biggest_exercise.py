@@ -21,13 +21,11 @@ def main():
     for i in range(int(n)):
         s=input()
         l=s.split()
-        j = 0
         if l[0][0] not in aDict:
             print(l[2][0])
             aDict[l[0][0]]=[l[2][j]]
         else:
             aDict[l[0][0]].append(l[2][j])
-        j = j + 1
         
     print(biggest(aDict))   
 
