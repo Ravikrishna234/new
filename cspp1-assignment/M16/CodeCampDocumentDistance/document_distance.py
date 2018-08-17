@@ -1,28 +1,28 @@
 """DOCUMENTDISTANCE"""
-filename="stopwords.txt"
 import math
+FILENAME1 = "stopwords.txt"
 def similarity(dict1, dict2):
     """DISTANCE"""
-    l=''
+    list_1 = ''
     for i in dict1:
         for j in i:
             if j not in '!@#$%^&*()_+-=[}{];:",.></?1234567890':
                 if j not in "'":
-                    l = l + j
-    s=''
+                    list_1 = list_1 + j
+    list_2 = ''
     for i in dict2:
         for j in i:
             if j not in '!@#$%^&*()_+-=[}{];:",.></?1234567890':
                 if j not in "'":
-                    s = s + j
+                    list_2 = list_2 + j
 
-    lis1=l.split()
-    lis2=s.split()
+    lis1 = list_1.split()
+    lis2 = list_2.split()
     lis3 = lis1 + lis2
-    dict3={}
+    dict3 = {}
     for word in lis3:
-        if word not in load_stopwords(filename).keys():
-            dict3[word] = (lis1.count(word),lis2.count(word))
+        if word not in load_stopwords(FILENAME1).keys():
+            dict3[word] = (lis1.count(word), lis2.count(word))
     numerator = 0
     denominator = 0
     for i in dict3:
