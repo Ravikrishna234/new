@@ -6,13 +6,13 @@ def similarity(dict1, dict2):
     list_1 = ''
     for i in dict1:
         for j in i:
-            if j not in '!@#$%^&*()_+-=[}{];:",.></?':
+            if j not in '!@#$%^&*()_+-=,.?':
                 if j not in "'":
                     list_1 = list_1 + j
     list_2 = ''
     for i in dict2:
         for j in i:
-            if j not in '!@#$%^&*()_+-=[}{];:",.></?':
+            if j not in '!@#$%^&*()_+-=",.?':
                 if j not in "'":
                     list_2 = list_2 + j
 
