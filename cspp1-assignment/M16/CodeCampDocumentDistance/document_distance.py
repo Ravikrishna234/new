@@ -7,12 +7,14 @@ def similarity(dict1, dict2):
     for i in dict1:
         for j in i:
             if j not in '!@#$%^&*()_+-=[}{];:",.></?1234567890':
-                l = l + j
+                if j not in "'":
+                    l = l + j
     s=''
     for i in dict2:
         for j in i:
             if j not in '!@#$%^&*()_+-=[}{];:",.></?1234567890':
-                s = s + j
+                if j not in "'":
+                    s = s + j
 
     lis1=l.split()
     lis2=s.split()
