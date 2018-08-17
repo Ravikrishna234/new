@@ -21,7 +21,6 @@ def similarity(dict1, dict2):
     for word in lis3:
         if word not in load_stopwords(filename).keys():
             dict3[word] = (lis1.count(word),lis2.count(word))
-    print(dict3)
     numerator = 0
     denominator = 0
     for i in dict3:
