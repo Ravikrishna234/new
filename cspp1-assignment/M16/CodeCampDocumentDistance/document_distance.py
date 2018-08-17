@@ -25,6 +25,8 @@ def similarity(dict1, dict2):
             dict3[word] = (lis1.count(word), lis2.count(word))
     numerator = 0
     denominator = 0
+    sum1 = 0
+    sum2 = 0
     for i in dict3:
         numerator = numerator + (dict3[i][0] * dict3[i][1])
         sum1 = sum1 + dict3[i][0] ** 2
