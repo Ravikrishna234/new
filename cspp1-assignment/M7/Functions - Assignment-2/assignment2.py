@@ -1,7 +1,7 @@
 """Assignment 2"""
 def paying_debtoff(mainbalance_1, annual_interest_rate):
     """Debt"""
-    fixed_payment = 0
+    fixed_payment_ = 0
     temp_balance = mainbalance_1
     while temp_balance > 0:
         temp_balance = mainbalance_1
