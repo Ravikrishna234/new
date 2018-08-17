@@ -6,12 +6,12 @@ def similarity(dict1, dict2):
     l=''
     for i in dict1:
         for j in i:
-            if j not in '~!@#$%^&*()_+=?1234567890':
+            if j not in '!@#$%^&*()_+-=[}{];:",.></?1234567890':
                 l = l + j
     s=''
     for i in dict2:
         for j in i:
-            if j not in '-~!@#$%^&*()_+=?1234567890':
+            if j not in '!@#$%^&*()_+-=[}{];:",.></?1234567890':
                 s = s + j
 
     lis1=l.split()
