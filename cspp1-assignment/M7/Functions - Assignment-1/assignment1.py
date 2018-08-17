@@ -2,7 +2,7 @@
 def paying_debtoff(balance, annual_interest_rate, monthly_payment_rate):
     """balance"""
     monthly_interest_rate = annual_interest_rate/12.0
-    updated_balance = balance
+    updated_balance = balance_
     month_ = 1
     while month_ <= 12:
         minimum_monthly_payment = monthly_payment_rate * updated_balance
