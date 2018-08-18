@@ -1,33 +1,8 @@
-'''
-    Tiny Search Engine - Part 1 - Build a search index
 
-    In this programming assingment you are given with some text documents as input.
-    Complete the program below to build a search index. Don't worry, it is explained below.
-    A search index is a python dictionary.
-    The keys of this dictionary are words contained in ALL the input text documents.
-    The values are a list of documents such that the key/word appears in each document atleast once.
-    The document in the list is represented as a tuple.
-    The tuple has 2 items. The first item is the document ID.
-    Document ID is represented by the list index.
-    For example: the document ID of the third document in the list is 2
-    The second item of the tuple is the frequency of the word occuring in the document.
-
-    Here is the sample format of the dictionary.
-    {
-        word1: [(doc_id, frequency),(doc_id, frequency),...],
-        word2: [(doc_id, frequency),(doc_id, frequency),...],
-        .
-        .
-    }
-'''
-
-# helper function to load the stop words from a file
 """BUILDSEARCHNDEX"""
-filename = "stopwords.txt"
+FILENAME = "stopwords.txt"
 def load_stopwords(filename):
-    '''
-        loads stop words from a file and returns a dictionary
-    '''
+    """build"""
     stopwords = {}
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
@@ -36,18 +11,14 @@ def load_stopwords(filename):
 
 
 def word_list(text):
-    '''
-        Change case to lower and split the words using a SPACE
-        Clean up the text by remvoing all the non alphabet characters
-        return a list of words
-    '''
+    """build"""
     print(text)
     list_1 = ''
     for i in text:
-    	for j in i:
-    		if j not in "~!@#$%^&*()_+=;,.?-1234567890":
-    			if j not in "'":
-    				list_1 = list_1 + j
+        for j in i:
+            if j not in "~!@#$%^&*()_+=;,.?-1234567890":
+                if j not in "'":
+                    list_1 = list_1 + j
     list_1 = list_1.split()
     return list_1
 
@@ -69,16 +40,17 @@ def build_search_index(docs):
 
     # return search index
     input_1 = word_list(docs)
-    aDict = {}
+    adictionary_ = {}
     for word in input_1:
-    	if word not in load_stopwords(filename)	:
-    		aDict[word] = (input_1.count(word))
-    return aDict
+        if word not in load_stopwords(FILENAME):
+            adictionary_[word] = (input_1.count(word))
+    return adictionary_
 def print_search_index(index):
     '''
         print the search index
     '''
     keys = sorted(index.keys())
+
     for key in keys:
         print(key)
         print(key, " - ", index[key])
@@ -91,11 +63,11 @@ def main():
     # empty document list
     documents = []
     # iterate for n times
-    lines = int(input())
+    lines = input()
     # iterate through N times and add documents to the list
-    for i in range(lines):
-        l=lines.split()
-        documents.append(l)
+    for i in range(int(lines)):
+        split_ = lines.split()
+        documents.append(split_)
 
     # call print to display the search index
     print_search_index(build_search_index(documents))
