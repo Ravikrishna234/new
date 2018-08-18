@@ -1,6 +1,5 @@
 """STEPS"""
 import random
-import string
 
 VOWELS = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
@@ -27,46 +26,46 @@ def loadWords():
 def getFrequencyDict(sequence):
     """step"""
     freq = {}
-    for x in sequence:
-        freq[x] = freq.get(x,0) + 1
+    for index_ in sequence:
+        freq[index_] = freq.get(index_, 0) + 1
     return freq
 def getWordScore(word, n):
     """step"""
     sum = 0
-    for letter in word:
-        if letter in SCRABBLE_LETTER_VALUES:
-            sum = sum + SCRABBLE_LETTER_VALUES[letter]
-    if n == len(word):      
-        return sum*len(word) + 50
-    return sum*len(word) 
+    for letter_ in word:
+        if letter_ in SCRABBLE_LETTER_VALUES:
+            sum = sum + SCRABBLE_LETTER_VALUES[letter_]
+    if n == len(word):
+        return sum * len(word) + 50
+    return sum * len(word)
 def displayHand(hand):
     """step"""
-    string =''
-    for letter in hand.keys():
-        for j in range(hand[letter]):
-            string += letter+' ' 
-    return string                             
+    string_ = ''
+    for letter_ in hand.keys():
+        for index_ in range(hand[letter_]):
+            string_ += letter_ + ' ' 
+    return string_  
 
 def dealHand(n):
     """step"""
-    hand={}
-    numVowels = n // 3
+    hand = {}
+    numVowels_ = n // 3
     
-    for i in range(numVowels):
-        x = VOWELS[random.randrange(0,len(VOWELS))]
-        hand[x] = hand.get(x, 0) + 1
+    for i in range(numVowels_):
+        random_ = VOWELS[random.randrange(0, len(VOWELS))]
+        hand[random_] = hand.get(random_, 0) + 1
         
-    for i in range(numVowels, n):    
-        x = CONSONANTS[random.randrange(0,len(CONSONANTS))]
-        hand[x] = hand.get(x, 0) + 1
+    for i in range(numVowels_, n):
+        random_ = CONSONANTS[random.randrange(0, len(CONSONANTS))]
+        hand[random_] = hand.get(random_, 0) + 1
         
     return hand
 def updateHand(hand, word):
     """step"""
     new_hand = dict(hand)
-    for letter in word:
-        if letter in new_hand:
-            new_hand[letter]-=1
+    for letter_ in word:
+        if letter_ in new_hand:
+            new_hand[letter_] -= 1
     return new_hand
             
 def isValidWord(word, hand, wordList):
@@ -77,33 +76,33 @@ def isValidWord(word, hand, wordList):
     for letter in word_dict:
         if letter not in hand:
             return False
-        if word_dict.get(letter)>hand.get(letter):
+        if word_dict.get(letter) > hand.get(letter):
             return False
         return True
     
 def calculateHandlen(hand):
     """step"""
-    sum = 0
+    sum1 = 0
     for i in hand:
-        sum += hand[i]
-    return sum
+        sum1 += hand[i]
+    return sum1
 
 def playHand(hand, wordList, n):
     """step"""
     totalScore = 0
     while calculateHandlen(hand) > 0:
-        print('current hand',displayHand(hand))
+        print('current hand', displayHand(hand))
         data = input("Enter word, or a . to indicate that you are finished:")
         if data == '.':
-            print('Goodbye! Total score: '+ str(totalScore)+' points.')
+            print('Goodbye! Total score: '+str(totalScore)+' points.')
             break
         else:
-            if not isValidWord(data,hand,wordList):
+            if not isValidWord(data, hand, wordList):
                 print('Invalid word, please try again.')
             else:
                 wordScore = int(getWordScore(data,HAND_SIZE))
                 totalScore += wordScore
-                print(data +"earned"+str(wordScore)+"points.Total:"+str(totalScore)+" points")
+                print(data + "earned" + str(wordScore)+"points.Total:"+ str(totalScore)+" points")
         
                 hand = updateHand(hand, data)
     print('Run out of letters.Total score:'+str(totalscore)+'points.') 
@@ -119,12 +118,12 @@ def playGame(wordList):
             adict = dict(hand)
             print(adict)
             displayHand(hand)
-            playHand(hand,wordList,HAND_SIZE)
+            playHand(hand, wordList, HAND_SIZE)
         elif user_input == 'r':
             if hand == {}:
                 print("You should play a new game then come here")
             else:
-                playHand(adict,wordList,HAND_SIZE)
+                playHand(adict, wordList, HAND_SIZE)
         elif user_input == 'e':
             exit(0)
         else:

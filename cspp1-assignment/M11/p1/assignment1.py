@@ -9,6 +9,7 @@ def get_word_score(word, n):
     for i in word:
         if i in SCRABBLE_LETTER_VALUES:
             sum = sum + SCRABBLE_LETTER_VALUES[i]
+            print(SCRABBLE_LETTER_VALUES[i])
     
     k = sum * n
     if len(word) == n:
