@@ -45,7 +45,7 @@ def add_matrix(m1, m2):
     if m1_rows == m2_rows and m1_cols == m2_cols:
         for r in range(m1_rows):
             for c in range(m1_cols):
-                result_matrix[i][j] = int(m1[r][c]) + int(m2[r][c])
+                result_matrix[r][c] = int(m1[r][c]) + int(m2[r][c])
         return result_matrix
     else:
         print("Error: Matrix shapes invalid for addition")
