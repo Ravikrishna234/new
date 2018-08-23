@@ -72,7 +72,8 @@ def read_matrix():
 def main():
     matrix_1 = read_matrix()
     matrix_2 = read_matrix()
-    pass
+    print(add_matrix(matrix_1,matrix_2))
+    print(mult_matrix(matrix_1,matrix_2))
 
 if __name__ == '__main__':
     main()
