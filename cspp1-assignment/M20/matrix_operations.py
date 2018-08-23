@@ -44,7 +44,7 @@ def read_matrix(l,l1):
         error message should be "Error: Invalid input for the matrix"
     '''
     for i in range(len(l)):
-        if len(l[i]) == len(l1[[i]]):
+        if len(type(l[i])) == len(type(l1[[i]])):
             return True
         return False
     pass
