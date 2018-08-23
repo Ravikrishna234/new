@@ -5,7 +5,7 @@ def mult_matrix(m1_, m2_):
         mult the matrices and return the result matrix
         print an error message if the matrix shapes are not valid for mult
         and return None
-        error message should be "Error: Matrix shapes invalid for mult"
+        error message will be "Error: Matrix shapes invalid for mult"
     '''
     m1_rows = len(m1_)
     m2_cols = len(m2_[1])
