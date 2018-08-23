@@ -12,13 +12,9 @@ def mult_matrix(m1, m2):
         for j in range(len(m1[0])):
             for k in range(len(m2)):
                 result[i][j] += int(m1[i][k]) * int(m2[k][j])
-    return result
-    
-    # except:
-    #     print("Error: Matrix shapes invalid for mult") 
-
-
-    pass
+    return result 
+    print("Error: Matrix shapes Invalid for mult")
+    return None
 
 def add_matrix(m1, m2):
     '''
@@ -28,11 +24,10 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if row1 == row2 and col1 == col2:
-        result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
-        for i in range(len(m1)):
-            for j in range(len(m2)):
-                    result[i][j] += int(m1[i][j]) + int(m2[i][j])
+    result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
+    for i in range(len(m1)):
+        for j in range(len(m2)):
+            result[i][j] += int(m1[i][j]) + int(m2[i][j])
 
         return result
     else:
@@ -69,9 +64,9 @@ def main():
         c1=input().split()
         l1.append(c1)
     if row1 == row2 and col1 == col2:
-        print(add_matrix(l,l1))
-    elif row1 == col1 or col1 == row1:
-        print(mult_matrix(l,l1))
+            print(add_matrix(l,l1))
+    if row1 == col2 or col1 == row2:
+            print(mult_matrix(l,l1))
 if __name__ == '__main__':
     main()
 
