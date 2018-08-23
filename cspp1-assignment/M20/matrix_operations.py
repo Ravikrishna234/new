@@ -20,7 +20,7 @@ def mult_matrix(m1, m2,row1,col2):
 
     pass
 
-def add_matrix(m1, m2):
+def add_matrix(m1, m2,row1,col1,row2,col2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -28,12 +28,16 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
-    for i in range(len(m1)):
-        for j in range(len(m2)):
-            result[i][j] += int(m1[i][j]) + int(m2[i][j])
+    if row1 == row2 and col1 == col2:
+        result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
+        for i in range(len(m1)):
+            for j in range(len(m2)):
+                    result[i][j] += int(m1[i][j]) + int(m2[i][j])
 
-    return result
+        return result
+    else:
+        print("Error: Matrix shapes invalid for addition")
+        return None
 
 def read_matrix(l,l1):
     '''
@@ -50,7 +54,7 @@ def read_matrix(l,l1):
     if count == len(l):
         return True
     else:
-        return False
+        print("Error: Invalid input for the matrix")
 
 def main():
     row1,col1 = map(int,input().split(','))
@@ -64,12 +68,10 @@ def main():
     for i in range(1,row2+1):
         c1=input().split()
         l1.append(c1)
-    if read_matrix(l,l1):
-        print(add_matrix(l,l1))
+    if row1 == row2 and col1 == col2:
+        print(add_matrix(l,l1,row1,col1,row2,col2))
+    elif row1 == col1 or col1 == row1:
         print(mult_matrix(l,l1,row1,col2))
-    else:
-        print("Error: Invalid input for the matrix")
-
 if __name__ == '__main__':
     main()
 
