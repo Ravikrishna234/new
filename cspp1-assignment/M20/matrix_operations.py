@@ -57,8 +57,8 @@ def main():
     for i in range(1,row2+1):
         c1=input().split()
         l1.append(c1)
-        print(add_matrix(l,l1))
-        print(mult_matrix(l,l1,row1,col2))
+    print(add_matrix(l,l1))
+    print(mult_matrix(l,l1,row1,col2))
 
 if __name__ == '__main__':
     main()
