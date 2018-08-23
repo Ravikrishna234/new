@@ -68,7 +68,7 @@ def main():
         print(add_matrix(l,l1))
         print(mult_matrix(l,l1,row1,col2))
     else:
-        print("Error: Invalid Input for the matrix")
+        print("Error: Invalid input for the matrix")
 
 if __name__ == '__main__':
     main()
