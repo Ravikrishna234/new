@@ -8,9 +8,9 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     if len(m1[0]) == len(m2):
-        result=[[0 for i in range(len(m1))]for j in range(len(m1[0]))]
+        result=[[0 for i in range(len(m1))]for j in range(len(m2[1]))]
         for i in range(len(m1)):
-            for j in range(len(m1[0])):
+            for j in range(len(m2[1])):
                 for k in range(len(m2)):
                     result[i][j] += int(m1[i][k]) * int(m2[k][j])
         return result
@@ -61,11 +61,13 @@ def main():
     for i in range(1,row1+1):
         c=input().split()
         l.append(c)
+    print(l)
 
     row2,col2 = map(int,input().split(','))
     for i in range(1,row2+1):
         c1=input().split()
         l1.append(c1)
+    print(l1)
     print(add_matrix(l,l1))
     print(mult_matrix(l,l1))
 if __name__ == '__main__':
