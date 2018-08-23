@@ -7,7 +7,7 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     m1_rows = len(m1)
-    m2_cols = len(m1[0])
+    m1_cols = len(m1[0])
     m2_rows = len(m2)
     m2_cols = len(m2[0])
     result_matrix = []
@@ -35,7 +35,7 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     m1_rows = len(m1)
-    m2_cols = len(m1[0])
+    m1_cols = len(m1[0])
     m2_rows = len(m2)
     m2_cols = len(m2[0])
     result_matrix = []
