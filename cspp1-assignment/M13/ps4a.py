@@ -43,7 +43,7 @@ def displayHand(hand):
     string_ = ''
     for letter_ in hand.keys():
         for index_ in range(hand[letter_]):
-            string_ += letter_ + ' ' 
+            string_ = letter_ + ' ' 
     return string_  
 
 def dealHand(n):

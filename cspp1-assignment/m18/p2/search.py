@@ -1,14 +1,15 @@
 """SEARCHINDEX"""
 def search(search_index, query):
     """search"""
-    adictionary_ = {}
-    for key in query:
-        for index_ in key:
-            if index_ in search_index.items():
-                adictionary_ = search_index[index_]
-                adictionary_ = search_index[index_]
-            print(adictionary_)
-    return adictionary_
+    query_1 = query.lower()
+    query = query_1.split(" ")
+    k=set()
+    for i in query:
+        if i in search_index:
+            target = search_index[i]
+            for i in target:
+                k.add(i[0])
+    return k
 
 def process_queries(search_index, queries):
     '''
@@ -16,8 +17,8 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    search_ = search(search_index, queries)
-    return search_
+    for word in queries:
+        print(search(search_index,word))
 
 def main():
     '''
@@ -31,9 +32,8 @@ def main():
     # read the search queries into a list
     queries = []
     for i in range(lines):
-        lower_ = input().lower()
-        split_ = lower_.split(" ")
-        queries.append(split_)
+        
+        queries.append(input())
 
     process_queries(search_index, queries)
 
