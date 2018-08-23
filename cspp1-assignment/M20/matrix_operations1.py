@@ -66,7 +66,7 @@ def read_matrix():
     cols_ = int(res[1])
     matrix_ = []
     for r in range(rows_):
-        matrix.append(list(input().strip().split()))
+        matrix_.append(list(input().strip().split()))
     return matrix_
 
 def main():
