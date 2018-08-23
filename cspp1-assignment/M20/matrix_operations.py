@@ -35,7 +35,7 @@ def add_matrix(m1, m2):
 
     return result
 
-def read_matrix():
+def read_matrix(l,l1):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -43,6 +43,10 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
+    for i in range(len(l)):
+        if len(l[i]) == len(l1[[i]]):
+            return True
+        return False
     pass
 
 def main():
@@ -57,8 +61,11 @@ def main():
     for i in range(1,row2+1):
         c1=input().split()
         l1.append(c1)
-    print(add_matrix(l,l1))
-    print(mult_matrix(l,l1,row1,col2))
+    if read_matrix(l,l1):
+        print(add_matrix(l,l1))
+        print(mult_matrix(l,l1,row1,col2))
+    else:
+        print("Error: Invalid Input for the matrix")
 
 if __name__ == '__main__':
     main()
