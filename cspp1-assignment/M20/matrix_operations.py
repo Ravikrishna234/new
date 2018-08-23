@@ -9,7 +9,7 @@ def mult_matrix(m1_, m2_):
     '''
     result = [[0 for i in range(len(m1_))]for j in range(len(m2_[1]))]
     if len(m1_[0]) == len(m2_):
-        for i in enumerate(len(m1_)):
+        for i in enumerate(m1_):
             for j in range(len(m2_[1])):
                 for k in range(len(m2_)):
                     result[i][j] += int(m1_[i][k]) * int(m2_[k][j])
