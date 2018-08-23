@@ -7,17 +7,16 @@ def mult_matrix(m1, m2,row1,col1,row2,col2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    try:
-        if row1 == col2 or row2 == col1:
-            result=[[0 for i in range(len(m1))]for j in range(len(m1[0]))]
-            for i in range(len(m1)):
-                for j in range(len(m1[0])):
-                    for k in range(len(m2)):
-                        result[i][j] += int(m1[i][k]) * int(m2[k][j])
-            return result
-    except:
-        print("Error: Matrix shapes Invalid for mult")
-        return None
+    if row1 == col2 or row2 == col1:
+        result=[[0 for i in range(len(m1))]for j in range(len(m1[0]))]
+        for i in range(len(m1)):
+            for j in range(len(m1[0])):
+                for k in range(len(m2)):
+                    result[i][j] += int(m1[i][k]) * int(m2[k][j])
+        return result
+    # except:
+    #     print("Error: Matrix shapes Invalid for mult")
+    #     return None
 
 def add_matrix(m1, m2,row1,row2,col1,col2):
     '''
@@ -27,17 +26,16 @@ def add_matrix(m1, m2,row1,row2,col1,col2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    try:
-        if row1 == row2 and col1 == col2:
-            result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
-            for i in range(len(m1)):
-                for j in range(len(m2)):
-                    result[i][j] += int(m1[i][j]) + int(m2[i][j])
+    if row1 == row2 and col1 == col2:
+        result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
+        for i in range(len(m1)):
+            for j in range(len(m2)):
+                result[i][j] += int(m1[i][j]) + int(m2[i][j])
 
-            return result
-    except:
-        print("Error: Matrix shapes invalid for addition")
-        return None
+        return result
+    #except:
+        #print("Error: Matrix shapes invalid for addition")
+        #return None
 
 def read_matrix(l,l1):
     '''
@@ -68,10 +66,8 @@ def main():
     for i in range(1,row2+1):
         c1=input().split()
         l1.append(c1)
-    if row1 == row2 and col1 == col2:
-            print(add_matrix(l,l1,row1,row2,col1,col2))
-    if row1 == col2 or col1 == row2:
-            print(mult_matrix(l,l1,row1,col1,row2,col2))
+        print(add_matrix(l,l1))
+        print(mult_matrix(l,l1))
 if __name__ == '__main__':
     main()
 
