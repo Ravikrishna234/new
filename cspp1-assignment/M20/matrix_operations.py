@@ -60,13 +60,10 @@ def main():
     for i in range(1,row1+1):
         c=input().split()
         l.append(c)
-    print(l)
-
     row2,col2 = map(int,input().split(','))
     for i in range(1,row2+1):
         c1=input().split()
         l1.append(c1)
-    print(l1)
     print(add_matrix(l,l1))
     print(mult_matrix(l,l1))
 if __name__ == '__main__':
