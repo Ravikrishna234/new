@@ -44,7 +44,7 @@ def read_matrix(matrix_1):
         error message should be "Error: Invalid input for the matrix"
     '''
     matrix = []
-    for i in range(0, matrix_1[0]):
+    for i in range(0, int(matrix_1[0])):
         column = input().split()
         if len(column) == int(matrix_1[1]):
             matrix.append(column)
