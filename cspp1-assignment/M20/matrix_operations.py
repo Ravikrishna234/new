@@ -1,5 +1,5 @@
 """MATRIXOPERATION"""
-def mult_matrix(m1, m2,row1,col2):
+def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -20,7 +20,7 @@ def mult_matrix(m1, m2,row1,col2):
 
     pass
 
-def add_matrix(m1, m2,row1,col1,row2,col2):
+def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -69,9 +69,9 @@ def main():
         c1=input().split()
         l1.append(c1)
     if row1 == row2 and col1 == col2:
-        print(add_matrix(l,l1,row1,col1,row2,col2))
+        print(add_matrix(l,l1))
     elif row1 == col1 or col1 == row1:
-        print(mult_matrix(l,l1,row1,col2))
+        print(mult_matrix(l,l1))
 if __name__ == '__main__':
     main()
 
