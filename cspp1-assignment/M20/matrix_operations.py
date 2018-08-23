@@ -28,10 +28,10 @@ def add_matrix(m1_, m2_):
     for i in range(len(m1_)):
         if len(m1_) == len(m2_) and len(m1_[i]) == len(m2_[i]):
             result = [[0 for j in range(len(m1_))]for i in range(len(m1_[0]))]
-            #result = [[int(m1_[i][j]) + int(m2_[i][j])for j in range(len(m1_[0]))]for i in range(len(m1_))]
-            for i in range(len(m1_[0])):
-                for j in range(len(m1_)):
-                    result[i][j] += int(m1_[i][j]) + int(m2_[i][j])
+            result = [[int(m1_[i][j]) + int(m2_[i][j])for j in range(len(m1_[0]))]for i in range(len(m1_))]
+            # for i in range(len(m1_[0])):
+            #     for j in range(len(m1_)):
+            #         result[i][j] += int(m1_[i][j]) + int(m2_[i][j])
             return result
     print("Error: Matrix shapes invalid for addition")
     return None
