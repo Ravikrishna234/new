@@ -7,15 +7,16 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    result=[[0 for i in range(len(m1))]for j in range(len(m1[0]))]
-    for i in range(len(m1)):
-        for j in range(len(m1[0])):
-            for k in range(len(m2)):
-                result[i][j] += int(m1[i][k]) * int(m2[k][j])
+    if len(m1[0]) == len(m2):
+        result=[[0 for i in range(len(m1))]for j in range(len(m1[0]))]
+        for i in range(len(m1)):
+            for j in range(len(m1[0])):
+                for k in range(len(m2)):
+                    result[i][j] += int(m1[i][k]) * int(m2[k][j])
     return result
-    # except:
-    #     print("Error: Matrix shapes Invalid for mult")
-    #     return None
+    else:
+        print("Error: Matrix shapes Invalid for mult")
+        return None
 
 def add_matrix(m1, m2):
     '''
@@ -25,15 +26,17 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
-    for i in range(len(m1)):
-        for j in range(len(m2)):
-            result[i][j] += int(m1[i][j]) + int(m2[i][j])
+    if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
+        result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
+        result = [[int(m1[i][j]) + int(m2[i][j]) for j in range(len(m1))]for i in range(len(m1))]
+    # for i in range(len(m1)):
+    #     for j in range(len(m2)):
+    #         result[i][j] += int(m1[i][j]) + int(m2[i][j])
 
     return result
-    #except:
-        #print("Error: Matrix shapes invalid for addition")
-        #return None
+    else:
+        print("Error: Matrix shapes invalid for addition")
+        return None
 
 def read_matrix(l,l1):
     '''
@@ -64,9 +67,8 @@ def main():
     for i in range(1,row2+1):
         c1=input().split()
         l1.append(c1)
-    if read_matrix(l,l1):
-        print(add_matrix(l,l1))
-        print(mult_matrix(l,l1))
+    print(add_matrix(l,l1))
+    print(mult_matrix(l,l1))
 if __name__ == '__main__':
     main()
 
