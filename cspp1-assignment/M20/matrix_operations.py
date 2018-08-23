@@ -28,10 +28,10 @@ def add_matrix(m1_, m2_):
     for i in range(len(m1_)):
         if len(m1_) == len(m2_) and len(m1_[i]) == len(m2_[i]):
             result = [[0 for j in range(len(m1_))]for i in range(len(m1_[0]))]
-            result = [[int(m1_[i][j]) + int(m2_[i][j])for j in range(len(m1_[0]))]for i in range(len(m1_))]
-    # for i in range(len(m1)):
-    #     for j in range(len(m2)):
-    #         result[i][j] += int(m1[i][j]) + int(m2[i][j])
+            #result = [[int(m1_[i][j]) + int(m2_[i][j])for j in range(len(m1_[0]))]for i in range(len(m1_))]
+            for i in range(len(m1)):
+                for j in range(len(m2)):
+                    result[i][j] += int(m1[i][j]) + int(m2[i][j])
             return result
     print("Error: Matrix shapes invalid for addition")
     return None
@@ -44,7 +44,7 @@ def read_matrix(matrix_1):
         error message should be "Error: Invalid input for the matrix"
     '''
     matrix = []
-    for i in range(0, int(matrix_1[0])):
+    for _ in range(0, int(matrix_1[0])):
         column = input().split()
         if len(column) == int(matrix_1[1]):
             matrix.append(column)
