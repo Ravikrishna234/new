@@ -43,11 +43,14 @@ def read_matrix(l,l1):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
+    count = 0
     for i in range(len(l)):
-        if type(l[i]) == type(l1[i]):
-            return True
+        if len(l[i]) == len(l1[i]):
+            count += 1
+    if count == len(l):
+        return True
+    else:
         return False
-    pass
 
 def main():
     row1,col1 = map(int,input().split(','))
