@@ -28,7 +28,7 @@ def add_matrix(m1, m2):
     for i in range(len(m1)):
         if len(m1) == len(m2) and len(m1[i]) == len(m2[i]):
             result =[[0 for j in range(len(m1))]for i in range(len(m1[0]))]
-            result = [[int(m1[i][j]) + int(m2[i][j]) for j in range(len(m1))]for i in range(len(m1))]
+            result = [[int(m1[i][j]) + int(m2[i][j]) for j in range(len(m1[0]))]for i in range(len(m1))]
     # for i in range(len(m1)):
     #     for j in range(len(m2)):
     #         result[i][j] += int(m1[i][j]) + int(m2[i][j])
