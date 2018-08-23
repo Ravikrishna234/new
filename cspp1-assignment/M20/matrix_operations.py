@@ -43,10 +43,6 @@ def read_matrix(l,l1):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    for i in range(len(l)):
-        if len(type(l[i])) == len(type(l1[[i]])):
-            return True
-        return False
     pass
 
 def main():
@@ -61,11 +57,8 @@ def main():
     for i in range(1,row2+1):
         c1=input().split()
         l1.append(c1)
-    if read_matrix(l,l1):
         print(add_matrix(l,l1))
         print(mult_matrix(l,l1,row1,col2))
-    else:
-        print("Error: Invalid Input for the matrix")
 
 if __name__ == '__main__':
     main()
