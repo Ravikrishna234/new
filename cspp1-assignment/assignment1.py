@@ -103,15 +103,17 @@ class Message:
         Returns: a dictionary mapping a letter (string) to
         another letter (string).
         '''
-        letter = string.ascii_lowercase + string.ascii_uppercase
-        # for i in letter:
-        #     self.cipher_dict[i] = i
-        self.cipher_dict = {i:i for i in letter}
+        cap = lambda char, shift: chr((ord(char)-65 + shift)%26 +65)
+        small = lambda char, shift: chr((ord(char)-97 + shift)%26 +97)
+        for i in string.ascii_lowercase:
+            self.cipher_dict[i] = i
+        for i in string.ascii_uppercase:
+            self.cipher_dict[i] = i
         for i in self.cipher_dict:
             if i.islower():
-                self.cipher_dict[i] = chr((ord(i)-97 + shift)%26 +97)
+                self.cipher_dict[i] = small(i, shift)
             elif i.isupper():
-                self.cipher_dict[i] = chr((ord(i)-65 + shift)%26 +65)
+                self.cipher_dict[i] = cap(i, shift)
         return self.cipher_dict
 
     def apply_shift(self, shift):
