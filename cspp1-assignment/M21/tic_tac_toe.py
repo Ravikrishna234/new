@@ -3,10 +3,22 @@ def main():
 	for i in range(0,3):
 		c=input().split(' ')
 		matrix.append(c)
-	print(tictac(matrix))
+	k=tictactoe(matrix)
+	if len(k) == 0:
+		print('draw')
+	if len(k) == 1:
+		if k[0] == 'x' or k[0] == 'o':
+			print(k[0])
+		else:
+			print("Invalid Input")
+	else:
+		print("Inalid game")
+		
 def tictac(matrix):
-	if matrix[0][0] == matrix[1][1] == matrix[2][2]:
-		return matrix[0][0]
+	if matrix[0] == matrix[1] == matrix[2]:
+		return matrix[0]
+	elif matrix[0][0] == matrix[1][1] == matrix[2][2]:
+		return matrix[0][0]				
 	elif matrix[0][2] == matrix[1][1] == matrix[2][0]:
 		return matrix[0][2]
 	elif matrix[0][0] == matrix[0][1] == matrix[0][2]:
