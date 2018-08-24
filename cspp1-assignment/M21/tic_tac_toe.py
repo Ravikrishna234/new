@@ -20,7 +20,7 @@ def tictac(matrix):
 		print("draw")
 		return None
 	if len(player_) == 1:
-		if player_[0] == 'x' or player_[1] == 'o':
+		if player_[0] == 'x' or player_[0] == 'o':
 			print(player_[0])
 		else:
 			print("invalid input")
