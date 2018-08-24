@@ -24,7 +24,6 @@ def tictac(matrix):
 			print(player_[0])
 		else:
 			print("invalid input")
-		return player_[0]
 	else:
 		print("invalid game")
 		return None
