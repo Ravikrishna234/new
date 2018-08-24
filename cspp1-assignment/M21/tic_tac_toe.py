@@ -16,7 +16,7 @@ def tictac(matrix):
 		player_.append(matrix[1][1])
 	elif matrix[0][2] == matrix[1][1] == matrix[2][0]:
 		player_.append(matrix[1][1])
-	if len(player_) == 0:
+	if len(player_) == 1:
 		print('draw')
 		return None
 		if player_[0] == 'x' or player_[1] == 'o':
