@@ -4,6 +4,7 @@ def main():
 		c=input().split(' ')
 		matrix.append(c)
 	k=tictac(matrix)
+	print(k[0])
 	if len(k) == 0:
 		print('draw')
 	if len(k) == 1:
@@ -12,7 +13,7 @@ def main():
 		else:
 			print("Invalid Input")
 	else:
-		print("Inalid game")
+		print("invalid game")
 def tictac(matrix):
 	if matrix[0] == matrix[1] == matrix[2]:
 		return matrix[0]
