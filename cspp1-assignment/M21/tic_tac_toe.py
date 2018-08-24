@@ -3,7 +3,7 @@ def main():
 	for i in range(0,3):
 		c=input().split(' ')
 		matrix.append(c)
-	k=tictactoe(matrix)
+	k=tictac(matrix)
 	if len(k) == 0:
 		print('draw')
 	if len(k) == 1:
@@ -13,7 +13,6 @@ def main():
 			print("Invalid Input")
 	else:
 		print("Inalid game")
-		
 def tictac(matrix):
 	if matrix[0] == matrix[1] == matrix[2]:
 		return matrix[0]
