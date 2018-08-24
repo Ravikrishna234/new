@@ -25,6 +25,6 @@ def tictac(matrix):
 		return player_[0]
 	else:
 		print("invalid game")
-	return None
+		return None
 if __name__ == "__main__":
 	main()
