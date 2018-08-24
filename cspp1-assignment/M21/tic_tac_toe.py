@@ -10,7 +10,7 @@ def main():
 		if k[0] == 'x' or k[0] == 'o':
 			print(k[0])
 		else:
-			print("Invalid Input")
+			print("invalid input")
 	else:
 		print("invalid game")
 def tictac(matrix):
