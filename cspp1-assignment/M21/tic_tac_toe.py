@@ -3,7 +3,7 @@ def main():
 	for i in range(0,3):
 		c=input().split(' ')
 		matrix.append(c)
-	print(tictac(matrix))
+	tictac(matrix)
 def tictac(matrix):
 	player_= []
 	for i in matrix:
