@@ -3,7 +3,8 @@ def main():
 	for i in range(0,3):
 		c=input().split(' ')
 		matrix.append(c)
-	k=tictac(matrix)
+	k = []
+	k.append(tictac(matrix))
 	if len(k) == 0:
 		print('draw')
 	if len(k) == 1:
