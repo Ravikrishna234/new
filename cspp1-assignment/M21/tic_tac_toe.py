@@ -20,7 +20,7 @@ def tic_tac(matrix):
             print(player_[0])
         else:
             print("invalid input")
-            return player_[0]
+        return player_[0]
     else:
         print("invalid game")
         return None
