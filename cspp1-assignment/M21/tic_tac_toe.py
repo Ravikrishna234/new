@@ -22,9 +22,9 @@ def tictac(matrix):
 			print(player_[0])
 		else:
 			print("invalid input")
-			return None
+		return player_[0]
 	else:
 		print("invalid game")
-	return player_[0]
+	return None
 if __name__ == "__main__":
 	main()
