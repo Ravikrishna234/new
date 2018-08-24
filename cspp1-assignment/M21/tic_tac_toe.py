@@ -18,5 +18,7 @@ def tictac(matrix):
 		return matrix[2][2]
 	elif matrix[0][1] == matrix[1][1] == matrix[2][1]:
 		return matrix[2][1]
+	elif matrix[1][0] == matrix[1][1] == matrix[1][2]:
+		return matrix[1][2]
 if __name__ == "__main__":
 	main()
