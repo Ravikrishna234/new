@@ -2,9 +2,6 @@ def main():
 	matrix = []
 	for i in range(0,3):
 		c=input().split(' ')
-		if c!= 'x' or c!='o' or c!='.':
-			print("Invalid Input")
-			break
 		matrix.append(c)
 	print(tictac(matrix))
 def tictac(matrix):
