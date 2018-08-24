@@ -4,7 +4,6 @@ def main():
 		c=input().split(' ')
 		matrix.append(c)
 	k=tictac(matrix)
-	print(k[0])
 	if len(k) == 0:
 		print('draw')
 	if len(k) == 1:
