@@ -15,9 +15,13 @@ def check_sudoku(sudoku):
     '''
     matrix = []
     for row in sudoku:
-        if len(set(row)) == 9:
-            return True
-        return False
+        k=set(row)
+        for i in k:
+            if i in "123456789":
+                if len(k) == 9:
+                    return True
+            return False
+
             
 def main():
     '''
