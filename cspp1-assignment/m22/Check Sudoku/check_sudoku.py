@@ -16,9 +16,9 @@ def check_sudoku(sudoku):
     matrix = []
     for row in sudoku:
         if len(set(row)) == 9:
-            print("True")
-        else:
-            print("False")
+            return True
+        return False
+            
 def main():
     '''
         main function to read input sudoku from console
