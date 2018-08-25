@@ -18,6 +18,7 @@ def check_sudoku(sudoku):
         for i in row:
             if i not in "123456789":
                 return False
+        if len(set(row)) == 9:
             return True
                 
 
