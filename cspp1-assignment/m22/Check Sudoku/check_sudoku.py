@@ -18,8 +18,6 @@ def check_sudoku(sudoku):
         for i in row:
             if i not in "123456789":
                 return False
-            if len(set(row)) == 9:
-                return True
     i = 0
     for j in sudoku:
         if len(set(j)) == 9 and len(set(j[i])) == 9:
