@@ -14,7 +14,7 @@ def check_sudoku(sudoku):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     matrix = []
-    for row in sudoko:
+    for row in sudoku:
         if len(set(row)) == 9:
             print("True")
         else:
