@@ -10,7 +10,7 @@ def clean_string(string_):
     """clean"""
     string1_ = ''
     for i in string_:
-    	if i in small_ and numbers_:
+    	if i in small_ or i in numbers_:
     		string1_ = string1_ + i
     return string1_
 
