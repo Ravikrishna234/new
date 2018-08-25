@@ -8,12 +8,13 @@ def frequency_graph(dictionary):
     list_ = sorted(dictionary.keys())
     j = 0
     for i in list_:
-    	value = dictionary[i]
-    	c='#'*value
-    	print(str(list_[j]+" - "+str(c)))
-    	j = j + 1
+        value = dictionary[i]
+        count_ = '#'*value
+        print(str(list_[j]+" - "+str(count_)))
+        j = j + 1
 
 def main():
+    """sorted"""
     dictionary = eval(input())
     frequency_graph(dictionary)
 
