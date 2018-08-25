@@ -15,16 +15,15 @@ def check_sudoku(sudoku):
     '''
     matrix = []
     for row in sudoku:
-        k=set(row)
-        for i in k:
-            print(i)
-            if i in "123456789":
-                if len(k) == 9:
-                    return True
+        for i in row:
+            if i not in "123456789":
                 return False
+            return True
+                
 
             
 def main():
+
     '''
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
