@@ -17,10 +17,11 @@ def check_sudoku(sudoku):
     for row in sudoku:
         k=set(row)
         for i in k:
+            print(i)
             if i in "123456789":
                 if len(k) == 9:
                     return True
-            return False
+                return False
 
             
 def main():
