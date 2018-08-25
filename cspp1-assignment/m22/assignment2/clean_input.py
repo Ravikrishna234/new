@@ -3,14 +3,14 @@ Write a function to clean up a given string by removing the special characters a
 alphabets in both upper and lower case and numbers.
 '''
 import string
-small_ = string.ascii_lowercase
-cap_ = string.ascii_uppercase
-numbers_ = '0123456789'
+SMALL_ = string.ascii_lowercase
+Capital_ = string.ascii_uppercase
+NUMBER_ = '0123456789'
 def clean_string(string_):
     """clean"""
     string1_ = ''
     for i in string_:
-    	if i in small_ or i in numbers_:
+    	if i in SMALL_ or i in NUMBER_:
     		string1_ = string1_ + i
     return string1_
 
