@@ -18,7 +18,7 @@ def tokenize(string_):
 def main():
 	n=int(input())
 	for i in range(n):
-		str_ = input().split(", ")
+		str_ = input().split(" ")
 	print(tokenize(str_))
     
 
