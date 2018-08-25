@@ -17,7 +17,7 @@ def main():
     number_ = int(input())
     for _ in range(number_):
         str_ = input()
-        str_1 = re.split(', | "|",|\n"| |";| ',str_)
+        str_1 = re.split(', | "|",|\n"| |";| ', str_)
 
     print(tokenize(str_1))
 if __name__ == '__main__':
