@@ -20,9 +20,11 @@ def check_sudoku(sudoku):
                 return False
     i = 0
     for j in sudoku:
-        if len(set(j)) == 9 and len(set(j[i])) == 9:
-            return True
-        return False
+        for i in j:
+            if j not in "123456789":
+                if len(set(j)) == 9 and len(set(j[i])) == 9:
+                    return True
+            return False
     
                 
 
