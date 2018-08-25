@@ -2,7 +2,6 @@
 
 def biggest(aDict):
     """big"""
-    print(aDict)
     i = 0
     L = []
     for k in aDict:
@@ -22,10 +21,9 @@ def main():
         s=input()
         l=s.split()
         if l[0][0] not in aDict:
-            print(l[2][0])
-            aDict[l[0][0]]=[l[2][j]]
+            aDict[l[0][0]]=[l[1][0]]
         else:
-            aDict[l[0][0]].append(l[2][j])
+            aDict[l[0][0]].append(l[1][0])
         
     print(biggest(aDict))   
 

@@ -12,6 +12,7 @@ def tic_tac(matrix):
         player_.append(matrix[1][1])
     elif matrix[0][2] == matrix[1][1] == matrix[2][0]:
         player_.append(matrix[1][1])
+    print(player_)
     if player_ == []:
         print("draw")
         return None
