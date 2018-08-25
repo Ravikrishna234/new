@@ -5,11 +5,12 @@ alphabets in both upper and lower case and numbers.
 import string
 small_ = string.ascii_lowercase
 cap_ = string.ascii_uppercase
+numbers_ = '0123456789'
 def clean_string(string_):
     """clean"""
     string1_ = ''
     for i in string_:
-    	if i in small_:
+    	if i in small_ and numbers_:
     		string1_ = string1_ + i
     return string1_
 
