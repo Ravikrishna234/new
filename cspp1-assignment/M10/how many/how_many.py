@@ -1,13 +1,11 @@
 """VALUES IN DICTIONARY"""
-def how_many(aDict):
+def how_many(aDictionary):
     """dict"""
-    print(aDict)
-    print(aDict)
     total = 0
     k = ''
     value_list = {}
-    for i in aDict:
-        value_list = aDict[i]
+    for i in aDictionary:
+        value_list = aDictionary[i]
         count = len(value_list)
         k = k + i
 

@@ -2,12 +2,12 @@
 def get_available_letters(letters_guessed):
     """sort"""
     import string
-    st_r = ''
-    co_unt = dict((key,0)for key in string.ascii_lowercase)
-    for char in co_unt.keys():
+    string_ = ''
+    count_ = dict((key,0)for key in string.ascii_lowercase)
+    for char in count_.keys():
         if char not in letters_guessed:
-            st_r = st_r + char
-    return st_r
+            string_ = string_ + char
+    return string_
 def main():
     """sort"""
     user_input = input()

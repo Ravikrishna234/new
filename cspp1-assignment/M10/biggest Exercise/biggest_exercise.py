@@ -1,12 +1,12 @@
 """BIGGEST"""
 
-def biggest(aDict):
+def biggest(aDictionary):
     """big"""
     i = 0
     L = []
-    for k in aDict:
-        if len(aDict[k]) >= i:
-            i =len(aDict[k])
+    for k in aDictionary:
+        if len(aDictionary[k]) >= i:
+            i =len(aDictionary[k])
             L = k
     return L
 

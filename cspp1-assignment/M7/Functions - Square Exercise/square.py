@@ -1,8 +1,8 @@
 """Function square"""
-def square(x_sq):
+def square(x_square):
     """square"""
-    x_sq = x_sq*x_sq
-    return x_sq
+    x_square = x_square*x_square
+    return x_square
 
 def main():
     """square"""

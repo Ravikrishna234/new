@@ -1,8 +1,8 @@
 """Quadratic evaluation"""
 
-def eval_quadratic(a_in, b_in, c_in, x_in):
+def eval_quadratic(a_, b_, c_, x_):
     """quadratic"""
-    result_ = a_in * (x_in * x_in) + b_in * x_in + c_in
+    result_ = a_ * (x_ * x_) + b_ * x_ + c_
     return result_
 
 def main():
