@@ -1,18 +1,18 @@
 """square_root_bisection"""
 def main():
     """square"""
-    sq_in = int(input())
-    cons_tant = 0.01
-    a_in = 0.0
-    b_in = sq_in
-    c_out = (b_in + a_in)/2.0
-    while abs(c_out**2 - sq_in) >= cons_tant:
-        if c_out**2 < sq_in:
-            a_in = c_out
+    square_input = int(input())
+    constant_ = 0.01
+    start_value = 0.0
+    temp_ = square_input
+    check_ = (temp_ + start_value)/2.0
+    while abs(check_**2 - square_input) >= constant_:
+        if check_**2 < square_input:
+            start_value = check_
         else:
-            b_in = c_out
-        c_out = (b_in + a_in)/2.0
-    print(str(c_out))
+            temp_ = check_
+        check_ = (temp_ + start_value)/2.0
+    print(str(check_))
 
 if __name__ == "__main__":
     main()

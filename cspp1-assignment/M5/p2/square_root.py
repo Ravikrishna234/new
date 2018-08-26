@@ -1,16 +1,16 @@
 """squareroot"""
 def main():
     """square"""
-    sq_in = int(input())
-    cons_tant = 0.01
-    st_art = 0.0
-    in_cr = 0.1
-    while abs(st_art**2 - sq_in) >= cons_tant and st_art <= sq_in:
-        st_art += in_cr
-    if abs(st_art**2 - sq_in) >= cons_tant:
-        print('Failed on cube root of', sq_in)
+    square_input = int(input())
+    constant_ = 0.01
+    startvalue_ = 0.0
+    increment_ = 0.1
+    while abs(startvalue_**2 - square_input) >= constant_ and startvalue_ <= square_input:
+        startvalue_ += increment_
+    if abs(startvalue_**2 - square_input) >= constant_:
+        print('Failed on cube root of', square_input)
     else:
-        print(st_art)
+        print(startvalue_)
 
 if __name__ == "__main__":
     main()
