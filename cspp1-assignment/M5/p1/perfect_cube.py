@@ -3,7 +3,7 @@ def main():
     """cube"""
     i = 0
     cube_ = int(input())
-    for i in range(abc(cube_)+1):
+    for i in range(abs(cube_)+1):
         if i**3 >= abs(cube_):
             break
     if i ** 3 != abs(cube_):
