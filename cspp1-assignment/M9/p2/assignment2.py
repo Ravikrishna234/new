@@ -11,7 +11,6 @@ def get_guessed_word(secret_word, letters_guessed):
 def main():
     """word"""
     user_input = input()
-    k = []
     if user_input:
         data = user_input.split()
         secret_word = data[0]
