@@ -2,15 +2,15 @@
 def main():
     """cube"""
     i = 0
-    x_cu = int(input())
-    for i in range(abs(x_cu)+1):
-        if i**3 >= abs(x_cu):
+    cube_ = int(input())
+    for i in range(abc(cube_)+1):
+        if i**3 >= abs(cube_):
             break
-    if i ** 3 != abs(x_cu):
-        print(x_cu, 'is not a perfect cube')
+    if i ** 3 != abs(cube_):
+        print(cube_,"is not a perfect cube")
     else:
-        if x_cu < 0:
+        if cube_ < 0:
             i = -i
-        print(x_cu, "is a perfect cube")
+        print(cube_,"is a perfect cube")
 if __name__ == "__main__":
     main()

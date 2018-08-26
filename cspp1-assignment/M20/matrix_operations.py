@@ -50,10 +50,7 @@ def read_matrix(matrix_1):
     matrix = []
     for _ in range(0, int(matrix_1[0])):
         column = input().split()
-        print(column)
-        print(matrix_1[0])
         if len(column) == int(matrix_1[1]):
-            print(matrix_1[1])
             matrix.append(column)
         else:
             print("Error: Invalid input for the matrix")
@@ -76,7 +73,6 @@ def main():
     # print(mult_matrix(l,l1))
     input_ = input()
     list1_ = input_.split(',')
-    print(list1_)
     matrix_1 = read_matrix(list1_)
     input_ = input()
     list2_ = input_.split(',')
