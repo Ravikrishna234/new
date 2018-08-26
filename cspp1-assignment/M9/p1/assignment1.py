@@ -1,12 +1,12 @@
 """HANGMAN"""
 def is_word_guessed(secret_word, letters_guessed):
     """man"""
-    co_unt = 0
-    len_gth = len(secret_word)
+    count_ = 0
+    length_ = len(secret_word)
     for i in secret_word:
         if i in letters_guessed:
-            co_unt += 1
-    if co_unt == len_gth:
+            count_ += 1
+    if count_ == length_:
         return True
     return False
 def main():
