@@ -1,16 +1,16 @@
 """DOCUMENTDISTANCE"""
 import math
 FILENAME = "stopwords.txt"
-def similarity(dict_1, dict_2):
+def similarity(dictionary_1, dictionary_2):
     """DISTANCE"""
     list_1 = ''
-    for i in dict_1:
+    for i in dictionary_1:
         for j in i:
             if j not in '!@#$%^&*()_+-=,.?1234567890':
                 if j not in "'":
                     list_1 = list_1 + j
     list_2 = ''
-    for i in dict_2:
+    for i in dictionary_2:
         for j in i:
             if j not in '!@#$%^&*()_+-=",.?1234567890':
                 if j not in "'":
@@ -19,18 +19,18 @@ def similarity(dict_1, dict_2):
     list_1 = list_1.split()
     list_2 = list_2.split()
     list_3 = list_1 + list_2
-    dict3 = {}
+    dictionary3 = {}
     for word in list_3:
         if word not in load_stopwords(FILENAME).keys():
-            dict3[word] = (list_1.count(word), list_2.count(word))
+            dictionary3[word] = (list_1.count(word), list_2.count(word))
     numerator = 0
     denominator = 0
     sum1 = 0
     sum2 = 0
-    for i in dict3:
+    for i in dictionary3:
         numerator = numerator + (dict3[i][0] * dict3[i][1])
-        sum1 = sum1 + dict3[i][0] ** 2
-        sum2 = sum2 + dict3[i][1] ** 2
+        sum1 = sum1 + dictionary3[i][0] ** 2
+        sum2 = sum2 + dictionary3[i][1] ** 2
     denominator = math.sqrt(sum1) * math.sqrt(sum2)
     similarity1 = (numerator / denominator)
     return similarity1

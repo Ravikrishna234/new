@@ -3,7 +3,7 @@ def get_available_letters(letters_guessed):
     """sort"""
     import string
     string_ = ''
-    count_ = dict((key,0)for key in string.ascii_lowercase)
+    count_ = dict((key, 0)for key in string.ascii_lowercase)
     for char in count_.keys():
         if char not in letters_guessed:
             string_ = string_ + char
